@@ -8,8 +8,6 @@
 </head>
 <body>
   <div id="myModal" class="modal">
-
-    <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
       <p id="mordalp">만나서 반가워요. 즐겁고 행복한 하루되세요!</p>
@@ -33,7 +31,7 @@
     </div>
     <div id="list">
       <div id="box">
-        <div id="image">
+        <div class="image">
           <img src="../dogs/dog1.jpg" alt="">
         </div>
         <div id="content">
@@ -54,7 +52,7 @@
         </div>
       </div>
       <div id="box">
-        <div id="image">
+        <div class="image">
           <img src="../dogs/dog2.jpg" alt="">
         </div>
         <div id="content">
@@ -75,7 +73,7 @@
         </div>
       </div>
       <div id="box">
-        <div id="image">
+        <div class="image">
           <img src="../dogs/dog3.jpg" alt="">
         </div>
         <div id="content">
@@ -96,7 +94,7 @@
         </div>
       </div>
       <div id="box">
-        <div id="image">
+        <div class="image">
           <img src="../dogs/dog4.jpg" alt="">
         </div>
         <div id="content">
@@ -117,7 +115,7 @@
         </div>
       </div>
       <div id="box">
-        <div id="image">
+        <div class="image">
           <img src="../dogs/dog5.jpg" alt="">
         </div>
         <div id="content">
@@ -143,7 +141,7 @@
       </div>
     </div>
     <div id="box">
-      <div id="image">
+      <div class="image">
         <img src="../dogs/dog6.jpg" alt="">
       </div>
       <div id="content">
@@ -168,7 +166,7 @@
       </div>
     </div>
     <div id="box">
-      <div id="image">
+      <div class="image">
         <img src="../dogs/dog7.jpg" alt="">
       </div>
       <div id="content">
@@ -189,7 +187,7 @@
       </div>
     </div>
     <div id="box">
-      <div id="image">
+      <div class="image">
         <img src="../dogs/dog8.jpg" alt="">
       </div>
       <div id="content">
@@ -210,7 +208,7 @@
       </div>
     </div>
     <div id="box">
-      <div id="image">
+      <div class="image">
         <img src="../dogs/dog9.jpg" alt="">
       </div>
       <div id="content">
@@ -231,7 +229,7 @@
       </div>
     </div>
     <div id="box">
-      <div id="image">
+      <div class="image">
         <img src="../dogs/dog10.jpg" alt="">
       </div>
       <div id="content">
@@ -261,6 +259,14 @@
   span.onclick = function() {
     modal.style.display = "none";
   }
+
+  let img = document.getElementsByClassName("image")[0];
+
+  img.addEventListener('click', () => {
+    let text = document.getElementById("mordalp").innerHTML = "첫번째 강아지입니당"
+    modal.style.display = "inline";
+
+  });
 
 
   let clock = document.querySelector('#clockContent');
